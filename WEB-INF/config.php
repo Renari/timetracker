@@ -37,7 +37,7 @@ set_include_path(realpath(dirname(__FILE__).'/lib/pear') . PATH_SEPARATOR . get_
 // CHANGE 3 PARAMETERS HERE!
 // In this example: "root" is username, "no" is password, "dbname" is database name.
 //
-define('DSN', 'mysqli://'.getenv('DATABASE_USER').':'.getenv('DATABASE_PASS').'@'.getenv('DATABASE').'/'.getenv('DATABASE_NAME').'?charset=utf8');
+define('DSN', getenv('JAWSDB_MARIA_URL').'?charset=utf8');
 // Do NOT change charset unless you upgraded from an older Time Tracker where charset was NOT specified
 // and now you see some corrupted characters. See http://dev.mysql.com/doc/refman/5.0/en/charset-mysql.html
 
